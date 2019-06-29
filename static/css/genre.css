@@ -1,0 +1,240 @@
+/* cssリセット */
+@charset "UTF-8";
+
+html {
+  overflow-y: scroll;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.4;
+  min-width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  border: 0px;
+  vertical-align: bottom;
+}
+
+body {
+  font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", "Meiryo", "HGPｺﾞｼｯｸM", "Osaka", "ＭＳ Ｐゴシック", sans-serif, Century Gothic, Arial;
+}
+
+/* ヘッダ部分 */
+
+.genre-header {
+  background-color: #FFAE9B;
+  height: 70px;
+  width: 100%;
+}
+
+.genre-logo {
+  text-align: center;
+  padding-top: 22px;
+}
+
+.genre-reco-img {
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 20px;
+  color: #6F7579;
+  position: relative;
+  padding: 10px;
+  background: repeating-linear-gradient(-45deg, #fff5df, #fff5df 4px, #ffe4b1 3px, #ffe4b1 8px);
+  border-radius: 7px;
+}
+
+h1:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #ffebbe;
+  width: 0;
+  height: 0;
+}
+
+/* おすすめセクション */
+.genre-reco-img {
+  width: 100%;
+  height: 255px;
+}
+
+.genre-reco-text-wrap {
+  background-color: #E6E6E6;
+  height: 75px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.genre-reco-text ul {
+  position: relative;
+  top: 15px;
+  left: 15px;
+  float: left;
+
+}
+
+.genre-reco-text li {
+  font-size: 18px;
+  color:red;
+}
+
+.genre-link-btn img {
+  position: relative;
+  top: 15px;
+  right: -45px;
+
+
+}
+
+/* 切り替えボタン */
+
+#btn {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+#btn .genre {
+  display: inline-block;
+  padding: 10px 40px;
+  background: #3B4043;
+  font-size: 15px;
+  color: white;
+  margin-top: 30px;
+  border: solid 2px #6F7579;
+  border-radius: 3px;
+  transition: .1s;
+  text-decoration: none;
+}
+
+
+#btn .scene {
+  display: inline-block;
+  padding: 10px 40px;
+  background: #E6E6E6;
+  font-size: 15px;
+  color: #3B4043;
+  margin-top: 30px;
+  border: solid 2px #6F7579;
+  border-radius: 3px;
+  transition: .1s;
+  text-decoration: none;
+}
+
+/* カルーセル部分 */
+
+.gallary-wrapper {
+  margin-bottom: 75px;
+}
+
+h2 {
+  text-align: left;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: #6F7579;
+}
+
+.gallery-box {
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+.gallery-cell img {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.caption {
+  margin-top: 10px;
+}
+
+/* フッターナビメニュー */
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  background-color: #FFAE9B;
+}
+
+#nav {
+  list-style: none;
+  display: flex;
+  padding-inline-start: 0px;
+  justify-content: space-around;
+}
+
+
+#nav li {
+  width: 140px;
+  text-align: center;
+
+  height: 65px;
+  line-height: 65px;
+  margin-right: 2px;
+}
+
+#nav li a {
+  text-decoration: none;
+  padding: 5px;
+}
+
+.btn-square-shadow {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #6F7579;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  width:288px;
+
+}
+.btn-square-shadow:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+
+.gallery-cell{
+  width: 340px;
+}

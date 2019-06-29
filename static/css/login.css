@@ -1,0 +1,139 @@
+/* cssリセット */
+@charset "UTF-8";
+
+html {
+  overflow-y: scroll;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.4;
+  min-width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  border: 0px;
+  vertical-align: bottom;
+}
+
+body {
+  font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", "Meiryo", "HGPｺﾞｼｯｸM", "Osaka", "ＭＳ Ｐゴシック", sans-serif, Century Gothic, Arial;
+}
+
+/* ヘッダーロゴ */
+
+.header-logo {
+  background-color: #FFAE9B;
+  height: 460px;
+}
+
+#logo img {
+  position: relative;
+  top: 30px;
+}
+
+header h1 {
+  color: #6F7579;
+  font-size: 26px;
+}
+
+.header-text {
+  color: #6F7579;
+  margin: 10px auto;
+  width: 180px;
+  height: 200px;
+  text-align: left;
+}
+
+/* フォーム部分 */
+
+.form-section {
+  color: #6F7579;
+  margin: 45px auto;
+  width: 300px;
+  height: 200px;
+}
+
+input {
+  width: 100%;
+}
+
+label .login_line {
+  border-radius: 5px;
+  border: solid 2px #E6E6E6;
+  padding: 8px 0;
+}
+
+
+.login_align p {
+  padding: 10px 0;
+  text-align: left;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #3B4043;
+  font-size: 15px;
+  color: #E6E6E6;
+  margin-top: 30px;
+  border: solid 2px #6F7579;
+  border-radius: 3px;
+  transition: .4s;
+  text-decoration: none;
+}
+
+input[type="submit"]:hover {
+  background: #ffd386;
+}
+
+input[type="text"]::placeholder {
+  color: #dfdfdf;
+  font-size: 5px;
+  padding-left: 10px;
+}
+
+input[type="password"]::placeholder {
+  color: #dfdfdf;
+  font-size: 5px;
+  padding-left: 10px;
+}
+
+.login_line {
+  border: 1px solid blue;
+  font-size: 20px;
+}
+
+.login_align {
+  text-align: center;
+}

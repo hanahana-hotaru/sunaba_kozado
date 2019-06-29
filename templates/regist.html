@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+    <div class="header-logo">
+        <p id="logo">
+            <a href="/regist">
+                <img src="../static/img/kozado_logo_m.png" alt="KOZADOのロゴ">
+            </a>
+        </p>
+    </div>
+</header>
+<section>
+    <div class="regist-pic">
+        <img src="../static/img/billbord.png" alt="登録画面のメイン画像">
+    </div>
+</section>
+<section id="regist-section">
+    <div class="balloon1">
+        <p>ご登録はコチラから</p>
+    </div>
+    <div class="regist-form">
+        <form action="/regist" method="post" id="regist_form">
+            <div class="login_align">
+                <p>
+                    <label>ユーザー名<br>
+                        <input class="login_line" type="text" name="name" placeholder="ユーザー名を入力">
+                    </label>
+                </p>
+                <p>
+                    <label>パスワード<br>
+                        <input class="login_line" type="password" name="password" placeholder="パスワードを入力">
+                    </label>
+                </p>
+                <p><input type="submit" value="アカウントを作成"></p>
+            </div>
+        </form>
+        <p class="to-login"><a href="/login">すでにアカウントをお持ちですか？</a></p>
+    </div>
+</section>
+
+{% endblock %}

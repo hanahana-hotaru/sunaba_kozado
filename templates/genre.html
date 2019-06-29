@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<header>
+  <div class="genre-header">
+    <a href="#"><img class="genre-logo" src="../static/img/kozado_logo_s.png" alt="KOZADOロゴ"></a>
+  </div>
+</header>
+{% for item in rec_list %}
+<section class="genre-reco">
+
+  <h1>あなたへのオススメ</h1>
+
+  <a href="#"><img class="genre-reco-img" src="/static/img/{{item['rec_img']}}" alt="おすすめ店の画像"></a>
+  <div class="genre-reco-text-wrap">
+    <div class="genre-reco-text">
+      <ul>
+        <li>今一番ホッとなお店</li>
+        <li>{{item['rec_name']}}</li>
+      </ul>
+      <a class="genre-link-btn" href="/shopinfo/{{item['rec_id']}}"><img src="../static/img/link_btn.png" alt="店舗詳細ページへ"></a>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<div id="btn">
+  <a class="genre" href="/genre">ジャンル</a>
+  <a class="scene" href="/scene">シーン</a>
+</div>
+<div class="gallary-wrapper">
+  <div class="gallery-box">
+    <h2>和食</h2>
+    <div>
+     <ul class="js-flickity">
+     {% for item in all_stores[0] %}
+      <li class="gallery-cell"><img src="/static/img/{{item['img']}}"><br><a href="/shopinfo/{{item['id']}}" class="btn-square-shadow"><p class="caption">{{item["name"]}}</p></a></li>
+     {% endfor %}
+     </ul>
+    </div>
+  </div>  
+  <div class="gallery-box">
+      <h2>洋食</h2>
+      <div>
+       <ul class="js-flickity">
+       {% for item in all_stores[1] %}
+       <li class="gallery-cell"><img src="/static/img/{{item['img']}}"><br><a href="/shopinfo/{{item['id']}}" class="btn-square-shadow"><p class="caption">{{item["name"]}}</p></a></li>
+       {% endfor %}
+       </ul>
+      </div>
+    </div>  
+  
+    <div class="gallery-box">
+        <h2>多国籍料理</h2>
+        <div>
+         <ul class="js-flickity">
+         {% for item in all_stores[2] %}
+          <li class="gallery-cell"><img src="/static/img/{{item['img']}}"><br><a href="/shopinfo/{{item['id']}}" class="btn-square-shadow"><p class="caption">{{item["name"]}}</p></a></li>
+         {% endfor %}
+         </ul>
+        </div>
+      </div> 
+      <div class="gallery-box">
+          <h2>ファストフード</h2>
+          <div>
+           <ul class="js-flickity">
+           {% for item in all_stores[3] %}
+            <li class="gallery-cell"><img src="/static/img/{{item['img']}}"><br><a href="/shopinfo/{{item['id']}}" class="btn-square-shadow"><p class="caption">{{item["name"]}}</p></a></li>
+           {% endfor %}
+           </ul>
+          </div>
+        </div>  
+        <div class="gallery-box">
+            <h2>麺類</h2>
+            <div>
+             <ul class="js-flickity">
+             {% for item in all_stores[4] %}
+              <li class="gallery-cell"><img src="/static/img/{{item['img']}}"><br><a href="/shopinfo/{{item['id']}}" class="btn-square-shadow"><p class="caption">{{item["name"]}}</p></a></li>
+             {% endfor %}
+             </ul>
+            </div>
+          </div>
+          <div class="gallery-box">
+              <h2>テイクアウト</h2>
+              <div>
+               <ul class="js-flickity">
+               {% for item in all_stores[5] %}
+               <li class="gallery-cell"><img src="/static/img/{{item['img']}}"><br><a href="/shopinfo/{{item['id']}}" class="btn-square-shadow"><p class="caption">{{item["name"]}}</p></a></li>
+               {% endfor %}
+               </ul>
+              </div>
+            </div>      
+
+</div>
+<footer>
+  <div id="footer">
+    <ul id="nav">
+      <li><a href="/genre"><img src="../static/img/genre.png" alt="ジャンルへ移動"></a></li>
+      <li><a href="/scene"><img src="../static/img/scene.png" alt="シーンへ移動"></a></li>
+      <li><a href="/favorite"><img src="../static/img/favarite.png" alt="お気に入りへ移動"></a></li>
+      <li><a href="/logout"><img src="../static/img/logout.png" alt=""></a></li>
+    </ul>
+  </div>
+</footer>
+{% endblock %}

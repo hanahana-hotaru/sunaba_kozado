@@ -1,0 +1,124 @@
+/* cssリセット */
+@charset "UTF-8";
+
+html {
+  overflow-y: scroll;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.4;
+  min-width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  border: 0px;
+  vertical-align: bottom;
+}
+
+body {
+  font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", "Meiryo", "HGPｺﾞｼｯｸM", "Osaka", "ＭＳ Ｐゴシック", sans-serif, Century Gothic, Arial;
+}
+
+
+/* ヘッダーロゴ */
+
+.header-logo {
+  background-color: #FFAE9B;
+  height: 200px;
+}
+
+#logo img {
+  position: relative;
+  top: 30px;
+}
+
+/* 見出し */
+header h1 {
+  font-size: 22px;
+  color: #6F7579;
+  position: relative;
+  top: 50px;
+  margin: 0 auto;
+  width: 245px;
+  text-align: center;
+}
+
+.regist-pic img {
+  width: 100%;
+  height: 368px;
+  object-fit: cover;
+}
+
+.regist-text h2 {
+  font-size: 16px;
+  color: #6F7579;
+  margin-top: 15px;
+}
+
+.regist-text p {
+  font-size: 12px;
+  color: #6F7579;
+  margin: 15px auto;
+  width: 60%;
+  text-align: left;
+}
+
+/* 今すぐ登録ボタン */
+.btn-top-radius {
+  width: 80%;
+  position: relative;
+  bottom: 0;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  color: #FFA000;
+  background: #fff1da;
+  border-bottom: solid 4px #FFA000;
+  border-radius: 15px 15px 0 0;
+  transition: .1s;
+}
+
+.btn-top-radius:hover {
+  background: #ffc25c;
+  color: #FFF;
+}
+
+.to-login {
+  text-align: center;
+  font-size: 12px;
+  color: #6F7579;
+  margin: 15px 0 50px;
+}

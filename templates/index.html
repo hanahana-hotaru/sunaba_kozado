@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<header>
+  <div class="header-logo">
+    <p id="logo">
+      <a href="/regist">
+        <img src="../static/img/kozado_logo_m.png" alt="KOZADOのロゴ">
+      </a>
+    </p>
+    <h1 class="header-text">もう迷わない<br>ディープなコザグルメを<br>いつでも手の中に。</h1>
+  </div>
+</header>
+<section>
+  <div class="regist-pic">
+    <img src="../static/img/billbord.png" alt="登録画面のメイン画像">
+  </div>
+  <div class="regist-text">
+    <h2>ジャンルや気分でパパっと検索。<br>お気に入り機能で<br>いちでも瞬時にアクセス</h2>
+    <p>コザ付近のオススメの飲食店 約○○店を網羅。アナタが今食べたいものが手軽にすぐに見つかる便利なアプリ</p>
+  </div>
+</section>
+<a href="/regist" class="btn-top-radius">今すぐ登録</a>
+<p class="to-login"><a href="/login">すでにアカウントをお持ちですか？</a></p>
+
+{% endblock %}

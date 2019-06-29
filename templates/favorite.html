@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<header>
+  <div class="genre-header">
+    <a href="#"><img class="genre-logo" src="../static/img/kozado_logo_s.png" alt="KOZADOロゴ"></a>
+  </div>
+</header>
+{% for item in fav_list %}
+<section class="fav-list">
+  <div class="favlist-wrapper">
+    <div class="favlist-box">
+      <a href="/shopinfo/{{item['id']}}"><img class="thumbnail" src="/static/img/{{item['img']}}" alt="お店のアイコン"></a>
+      <a href="/shopinfo/{{item['id']}}"><table>
+        <tr>
+          <th>店舗：</th>
+          <td>{{item["name"]}}</td>
+        </tr>
+      </table></a>
+     
+    </div>
+    <form action="/del_fav" method="POST">
+      <input type="hidden" name="delete" value="{{item['id']}}">
+      <input class="fav-del" type="submit" name="delete" value="お気に入りから削除">
+    </form>
+    <hr>
+  </div>
+
+</section>
+{% endfor %}
+
+<footer>
+  <div id="footer">
+    <ul id="nav">
+      <li><a href="/genre"><img src="../static/img/genre.png" alt="ジャンルへ移動"></a></li>
+      <li><a href="/scene"><img src="../static/img/scene.png" alt="シーンへ移動"></a></li>
+      <li><a href="/favorite"><img src="../static/img/favarite.png" alt="お気に入りへ移動"></a></li>
+      <li><a href="/logout"><img src="../static/img/login.png" alt="#"></a></li>
+    </ul>
+  </div>
+</footer>
+{% endblock %}

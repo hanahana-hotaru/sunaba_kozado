@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<header>
+    <div class="header-logo">
+        <p id="logo">
+            <a href="/login">
+                <img src="../static/img/kozado_logo_l.png" alt="KOZADOのロゴ">
+            </a>
+        </p>
+        <h1>今日何食べる？</h1>
+        <p class="header-text">コザの町の旨いものを
+            パパっと検索してすぐに出かけよう(・∀・)</p>
+    </div>
+</header>
+<section class="form-section">
+    <form action="/login" method="post">
+        <div class="login_align">
+            <p>
+                <label>ユーザー名<br>
+                    <input class="login_line" type="text" name="name" placeholder="ユーザー名を入力">
+                </label>
+            </p>
+            <p>
+                <label>パスワード<br>
+                    <input class="login_line" type="password" name="password" placeholder="パスワードを入力">
+                </label>
+            </p>
+            <p><input type="submit" value="ログイン"></p>
+        </div>
+    </form>
+</section>
+
+{% endblock %}

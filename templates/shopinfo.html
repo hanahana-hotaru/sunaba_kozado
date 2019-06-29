@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+  <div class="header-logo">
+    <p id="logo">
+      <a href="/genre">
+        <img src="../static/img/kozado_logo_s.png" alt="KOZADOのロゴ">
+      </a>
+    </p>
+  </div>
+</header>
+{% for item in shopinfo %}
+<div class="shop_container">
+  <img src="/static/img/{{item['store_img']}}">
+</div>
+<div id="shop-title-wrapper">
+  <table class="shop_title">
+    <tr>
+      <th>店名</th>
+      <td>{{item['name']}}</td>
+    </tr>
+  </table>
+</div>
+<div class="fav-btn">
+  <form action="/add_fav" method="post">
+    <input type="hidden" name="store_id" value="{{item['store_id']}}">
+    <input class="btn-flat-border" type="submit" name="store_id" value="お気に入りに追加する">
+  </form>
+  <!-- <a href="/favorite/{{store_id}}" class="btn-flat-border"><i class="far fa-heart"></i></a> -->
+</div>
+<table class="shop-data">
+  <tr>
+    <th>営業時間</th>
+    <td>{{item['time']}}</td>
+  </tr>
+  <tr>
+    <th>定休日</th>
+    <td>{{item['day']}}</td>
+  </tr>
+</table>
+
+<div class="tel-btn">
+  <a href="tel:{{item['tel']}}" class="tel-btn-flat-border"><i class="fas fa-phone-volume"></i>電話する</a>
+</div>
+<iframe id="location-map" src="{{item['map']}}" frameborder="0" style="border:0" allowfullscreen></iframe>
+{% endfor %}
+<div id="footer">
+  <ul id="nav">
+    <li><a href="/genre"><img src="../static/img/genre.png" alt="ジャンルへ移動"></a></li>
+    <li><a href="/scene"><img src="../static/img/scene.png" alt="シーンへ移動"></a></li>
+    <li><a href="/favorite"><img src="../static/img/favarite.png" alt="お気に入りへ移動"></a></li>
+    <li><a href="#"><img src="../static/img/login.png" alt="ログアウト"></a></li>
+  </ul>
+</div>
+
+{% endblock %}
