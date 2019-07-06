@@ -87,10 +87,7 @@ def img_list():
     rec=c.fetchall()[0]
     print(rec[0])
     c.execute("select stores.store_img,stores.name,stores.id from stores where stores.id=?", (rec[0],))
-    rec_list=[]
-    for r in c.fetchall():
-        rec_list.append({"rec_img":r[0],"rec_name":r[1],"rec_id":r[2]})
-        print(rec_list)
+    rec_list=[{"rec_img":r[0],"rec_name":r[1],"rec_id":r[2]} for r in c.fetchall()]
     
     c.execute("select genre.id from genre")
     genre_num=c.fetchall()
